@@ -5,7 +5,7 @@
       yum:
         name: java
         state: latest
-    - name: Install Git Software
+    - name: Install Git Software in remote machines
       yum:
         name: git
         state: latest
