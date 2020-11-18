@@ -9,10 +9,6 @@
       yum:
         name: git
         state: latest
-    - name: Removing Older version of Tomcat
-      file: path=/usr/local/tomcat state=absent
-    - name: Removing Older Version of Tomcat from the Opt Folder  
-      file: path=/opt/Tomcat state=absent
     - name: Copying the Tomcat Software
       copy: src=/root/Desktop/apache-tomcat-8.5.59.tar.gz dest=/opt/Tomcat/
     - name: copying the Jenkins.war from Desktop to Webapps Folder
