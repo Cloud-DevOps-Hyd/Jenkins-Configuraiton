@@ -14,7 +14,9 @@
     - name: Removing Older Version of Tomcat from the Opt Folder  
       file: path=/opt/Tomcat state=absent
     - name: Download Tomcat 
-      get_url: url=https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.40/bin/apache-tomcat-9.0.40.tar.gz
+      get_url: 
+        url: url=https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.40/bin/apache-tomcat-9.0.40.tar.gz
+        dest: /opt
     - name: unarchiveing  The Tomcat Software in opt Folder
       unarchive: src=/opt/apache-tomcat-9.0.40.tar.gz dest=/opt copy=no
     - name: Starting the Tomcat Software Service
