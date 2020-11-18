@@ -1,6 +1,14 @@
 ---
 - hosts: all
   tasks:
+    - name: Install java
+      yum:
+        name: java
+        state: latest
+    - name: Install Git Software
+      yum:
+        name: git
+        state: latest
     - name: Removing Older version of Tomcat
       file: path=/usr/local/tomcat state=absent
     - name: Removing Older Version of Tomcat from the Opt Folder  
@@ -11,4 +19,3 @@
       unarchive: src=/opt/apache-tomcat-9.0.40.tar.gz dest=/opt copy=no
     - name: Starting the Tomcat Software Service
       command: nohup /opt/apache-tomcat-9.0.40/bin/startup.sh &
-      
