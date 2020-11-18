@@ -15,7 +15,7 @@
       file: path=/opt/Tomcat state=absent
     - name: creating a Directory in Opt Folder
       command: mkdir /opt/Tomcat
-    - name Copying the Tomcat Software
+    - name: Copying the Tomcat Software
       copy: src=/root/Desktop/apache-tomcat-8.5.59.tar.gz /opt/Tomcat/
     - name: unarchiveing  The Tomcat Software in opt Folder
       unarchive: src=/opt/Tomcat/apache-tomcat-8.5.59.tar.gz dest=/opt copy=no
