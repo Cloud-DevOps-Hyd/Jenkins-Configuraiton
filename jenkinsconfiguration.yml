@@ -12,7 +12,7 @@
     - name: Removing Older version of Tomcat
       file: path=/usr/local/tomcat state=absent
     - name: Removing Older Version of Tomcat from the Opt Folder  
-      file: path=/opt/Tomcat
+      file: path=/opt/Tomcat state=absent
     - name: Download Tomcat 
       get_url: url=https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.40/bin/apache-tomcat-9.0.40.tar.gz
     - name: unarchiveing  The Tomcat Software in opt Folder
