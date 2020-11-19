@@ -1,8 +1,7 @@
 ---
 - name: Install Apache Tomcat  Server
   hosts: 192.168.121.138
-  become: true
-
+  
   tasks:
   - name: Install Java in remote machines
     yum:
